@@ -1,6 +1,6 @@
-const Comment = require('./Comment');
-const Post = require('./Post');
-const User = require('./User');
+const Comment = require('../Comment');
+const Post = require('../Post');
+const User = require('../User');
 
 Comment.belongsTo(User, {
     constraints: false,
