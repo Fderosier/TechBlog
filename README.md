@@ -10,7 +10,7 @@ The application hosts community blog posts concerning technology and coding topi
 **Installation**
 Install the necessary npm packages for this app by running npm install in your terminal.
 **Credits**
-For this project I referenced the UNH Bootcamp repository's 13.18 exercise when coding the hooks in the User model. I also referenced this challenge's README.md examples for seeding the Post and Comment models. I also perdiodically referenced the documentation from Bootstrap when creating cards as well as Modzilla's documentation on the difference between reload() and replace(). LAstly, I would like to thank Lucky from AskBCS Learning Assitants who helped me troubleshoot an issue I was experiencing with some of my event handlers. With his help I learned that I had a conflict between the middleware function associated with my 'public' directory and some of my file paths.
+For this project I referenced the UNH Bootcamp repository's 13.18 exercise when coding the hooks in the User model. I also referenced this challenge's README.md examples for seeding the Post and Comment models. 
 
 **Links**
 
