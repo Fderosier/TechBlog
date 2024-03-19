@@ -1,0 +1,14 @@
+{{!-- card style view for each post shown on the homepage --}}
+<div id="card" class="card-header">
+  <div class="card-title">
+    <a href="/api/posts/{{id}}">
+      <h2>{{header}}</h2>
+      <a />
+  </div>
+  <div class="card-body">
+    <p>{{body}}</p>
+  </div>
+  <div class="card-footer">
+    <h5 class="card-subtitle">Posted on {{format_date created_at}}</h5>
+  </div>
+</div>

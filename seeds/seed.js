@@ -1,18 +1,21 @@
 const sequelize = require('../config/connection');
-const { User, Post, Comment } = require('../models');
+const { Comment, Post, User } = require('../models');
 
-const PostData = require('./PostData.json');
 const commentData = require('./commentData.json');
+const postData = require('./postData.json');
 const userData = require('./userData.json');
 
+// function for seeding all models
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
+  // seeding the user model
   const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
+  // seeding the post model & randomly assigning a user to each created post
   for (const post of postData) {
     await Post.create({
       ...post,
@@ -20,9 +23,8 @@ const seedDatabase = async () => {
     });
   }
 
-  const comments = await Comment.bulkCreate(commentData, {
-    returning: true,
-  });
+  // seeding the comment model
+ const comment = await Comment.bulkCreate(commentData);
 
   process.exit(0);
 };

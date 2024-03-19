@@ -1,3 +1,4 @@
+// event handler for signing up a new user
 const signupFormHandler = async (event) => {
   event.preventDefault();
 
@@ -12,13 +13,14 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/');
     } else {
-      alert(response.statusText);
+      alert('Failed to signup');
     }
   }
 };
 
+// event listener for signing up a new user
 document
-.querySelector('.signup-form')
-.addEventListener('submit', signupFormHandler);
+  .querySelector('#signup-form')
+  .addEventListener('submit', signupFormHandler);

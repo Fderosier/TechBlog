@@ -1,0 +1,28 @@
+{{!-- view for an individual post with associated comments --}}
+<div class="card-header">
+  <div class="card-title">
+    <h2>{{post.header}}</h2>
+  </div>
+  <div class="card-body">
+    <p>{{post.body}}</p>
+  </div>
+  <div class="card-footer">
+    <h5 class="card-subtitle">Posted by {{post.User.username}} on {{format_date post.created_at}}</h5>
+  </div>
+</div>
+<div class="comments">
+      <h4 class="post-comment">COMMENTS</h4>
+      {{#each post.comments as |comment|}}
+      <div id="border-left">
+        <h6 class="margin">Posted by {{User.username}} on {{format_date comment.created_at}}</h6>
+        <p class="margin">{{comment.comment}}</p>
+      </div>
+      {{/each}}
+</div>
+<form class="create-comment-form">
+  <label class="label" for="comment">ADD A COMMENT</label>
+  <input id="comment" type="text">
+  <button id="submit" type="submit">Submit</button>
+</form>
+
+<script src="/js/comment.js"></script>

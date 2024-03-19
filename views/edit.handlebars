@@ -1,0 +1,24 @@
+{{!-- view for editing or deleting a post --}}
+<div>
+    <h3 class="h2">EDIT POST</h3>
+    <form id="edit-post-form">
+        <div class="create">
+            <label for="title">Title</label>
+            <br>
+            <input id="title" type="text" value="{{header}}" placeholder="Please enter a new title"/>
+        </div>
+        <div class="create">
+            <label for="content">Content</label>
+            <br>
+            <input id="content" value="{{body}}" placeholder="Please enter the post content"/>
+        </div>
+        <div class="create">
+            <button class="submit" type="submit">Update Post</button>
+        </div>
+    </form>
+    <br>
+    <br>
+    <div id='break' class="create">
+        <button id="delete" type="click">Delete Post</button>
+    </div>
+</div>

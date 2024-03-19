@@ -1,21 +1,23 @@
-<div class="row">
-  <div class="col justify-content-center">
-    <h2 class="login">Login</h2>
-    <form class="form login-form">
-      <div class="form-group">
-        <input class="form-input" type="text" placeholder="Username" id="username-login" />
-      </div>
-      <div class="form-group">
-        <input class="form-input" type="password" placeholder="Password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">Login</button>
-      </div>
-      <div>
-        <a href="/signUp">Sign Up Instead</a>
-      </div>
-    </form>
+{{!-- view for user's to log in to site --}}
+<div class="card">
+    
+  <h3 class="card-header">Login</h3>
+
+  <div class="card-body indent">
+    <form  id="login-form" >
+    <label for="username-login">Username</label>
+    <input type="text" id="username-login"/>
+    <label for="password-login">Password</label>
+    <input type="password" id="password-login"/>
+    <button class="submit" type="submit">Submit</button>
+  </form>
   </div>
+
 </div>
 
-<script src="./js/login.js"></script>
+<div id="bump" class="create">
+  <button class="submit"><a id="last" href="/signup">Sign up</a></button>
+</div>
+
+
+<script src="/js/login.js"></script>

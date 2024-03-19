@@ -1,3 +1,4 @@
+// event handler for logging in a user
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -12,15 +13,14 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/dashboard');
+      document.location.replace('/');
     } else {
-      alert(response.statusText);
+      alert('Failed to log in');
     }
   }
 };
 
+// event listener for logging in a user
 document
-  .querySelector('.login-form')
+  .querySelector('#login-form')
   .addEventListener('submit', loginFormHandler);
-
-

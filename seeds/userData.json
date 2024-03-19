@@ -1,6 +1,14 @@
 [
   {
-    "username": "TestUser",
-    "password": "password"
+      "username": "sbrez",
+      "password": "pword1MILK"
+  },
+  {
+      "username": "epollaro",
+      "password": "pword2BREAD"
+  },
+  {
+      "username": "dsexton",
+      "password": "pword3EGGS"
   }
 ]

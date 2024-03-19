@@ -1,0 +1,11 @@
+{{!-- card style view for each post shown on dashboard --}}
+<div class="card">
+  <div class="card-header">
+    <h3 class="card-title"><a href="/dashboard/edit/{{id}}">{{header}}</a></h3>
+    <h4 class="card-body">{{body}}</h4>
+  </div>
+  <h4 class="post-comment">COMMENTS</h4>
+  {{#each comments as |comment|}}
+  {{> comment comment}}
+  {{/each}}
+</div>
